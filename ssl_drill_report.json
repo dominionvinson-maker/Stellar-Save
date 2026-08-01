@@ -1,0 +1,32 @@
+{
+  "drill_date": "2026-08-01T05:51:21Z",
+  "target": "localhost:443",
+  "dry_run": false,
+  "status": "passed",
+  "rotation_duration_ms": 41,
+  "load_probe": {
+    "duration_seconds": 60,
+    "requests_per_second": 10,
+    "total_requests": 525,
+    "failed_requests": 0,
+    "zero_downtime_confirmed": true
+  },
+  "certificate": {
+    "before": {
+      "cn": "staging-old.stellar-save.local,O=StellarSave,C=US",
+      "expires": "Aug  2 05:50:17 2026 GMT",
+      "sha256_fingerprint": "45:79:00:2C:5F:E5:3F:49:0E:0E:6D:E7:A4:9A:D3:E3:7F:25:F7:90:D1:6D:06:F1:62:DF:D6:8F:C3:84:EB:9C"
+    },
+    "after": {
+      "cn": "staging-new.stellar-save.local,O=StellarSave,C=US",
+      "expires": "Oct 30 05:50:17 2026 GMT",
+      "sha256_fingerprint": "AB:A7:6D:BB:05:36:2E:84:8C:2A:C4:81:0E:82:C8:36:39:32:72:4B:17:6A:36:1C:D0:2D:AE:A1:3A:9A:32:67"
+    },
+    "cert_changed": true
+  },
+  "assertions": {
+    "zero_failed_requests": true,
+    "new_cert_served": true,
+    "old_cert_gone": true
+  }
+}
